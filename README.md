@@ -15,7 +15,7 @@ This file contains the settings of all cypress environments needed for testing.
 
 **INFO**: A more complete explanation you can find in the [cypress documentation](https://docs.cypress.io/guides/references/configuration).
 
-- **baseUrl**: The adress of the application 'Exam Online';
+- **baseUrl**: The adress of the application;
 
 ## Scripts
 
