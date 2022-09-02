@@ -1,0 +1,46 @@
+{
+  "name": "reserva-e2e",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "postinstall": "husky install",
+    "reinstall": "yarn concurrently \"rm -rf ./node_modules\" \"rm -rf ./yarn.lock ./package-lock.json\" && yarn",
+    "commit": "cz",
+    "type:check": "tsc --pretty --noEmit --project tsconfig.json",
+    "prettier": "prettier --loglevel warn --write .",
+    "prettier:check": "prettier --check .",
+    "eslint": "eslint --fix --max-warnings 0 .",
+    "eslint:check": "eslint --max-warnings 0 .",
+    "e2e:open": "cypress open",
+    "e2e:headless": "cypress run",
+    "e2e:headless:record": "cypress run --record"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@types/node": "^18.7.14",
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
+    "commitizen": "^4.2.5",
+    "commitlint": "^17.1.2",
+    "concurrently": "^7.3.0",
+    "cross-env": "^7.0.3",
+    "cypress": "^10.7.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.23.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-import-helpers": "^1.2.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "typescript": "4.8.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
